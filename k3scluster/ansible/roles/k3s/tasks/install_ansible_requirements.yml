@@ -1,0 +1,13 @@
+- name: Install python setuptools and pip
+  apt:
+    update_cache: yes
+    name:
+      - python3-setuptools
+      - python3-pip
+    state: latest
+
+- name: Install python packages for ansible management
+  pip:
+    name: "{{item}}"
+  loop:
+    - "kubernetes=={{python_kubernetes_version}}"

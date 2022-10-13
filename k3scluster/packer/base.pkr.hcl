@@ -24,8 +24,8 @@ source "qemu" "debian11" {
   http_directory    = "./preseed/"
   #  iso_checksum      = "e307d0e583b4a8f7e5b436f8413d4707dd4242b70aea61eb08591dc0378522f3"
   iso_checksum = "file:https://mirrors.ustc.edu.cn/debian-cd/current/amd64/iso-cd/SHA256SUMS"
-  iso_url      = "/data/ISOandIMAGES/debian-11.5.0-amd64-netinst.iso"
-  #  iso_url           = "https://mirrors.ustc.edu.cn/debian-cd/current/amd64/iso-cd/debian-11.5.0-amd64-netinst.iso"
+#  iso_url      = "/data/ISOandIMAGES/debian-11.5.0-amd64-netinst.iso"
+  iso_url           = "https://mirrors.ustc.edu.cn/debian-cd/current/amd64/iso-cd/debian-11.5.0-amd64-netinst.iso"
   memory           = 1024
   net_device       = "virtio-net"
   output_directory = "output"

@@ -1,0 +1,18 @@
+- name: Wait until the cluster boostrap is ok
+  wait_for:
+    path:  /var/lib/rancher/k3s/server/node-token
+    timeout: 30
+
+- name: Get server token
+  shell: cat /var/lib/rancher/k3s/server/node-token
+  changed_when: false
+  register: tokencmd
+
+- set_fact:
+    token: "{{tokencmd.stdout}}"
+
+- name: Fetch kubeconfig file
+  fetch:
+    src: /etc/rancher/k3s/k3s.yaml
+    dest: ./
+    flat: yes

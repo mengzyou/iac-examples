@@ -1,5 +1,11 @@
-*/output/
-*/preseed/*.password
-*/packer_cache/
+packer/output/
+packer/preseed/*.password
+packer/packer_cache/
 packer_cache/
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/*.auto.tfvars
+ansible/k3s_hosts
+ansible/k3s.yaml
 

@@ -1,0 +1,6 @@
+- hosts: k3s
+  roles:
+    - role: k3s-apps
+      when: role == "server"
+  tags:
+    - k3s-apps

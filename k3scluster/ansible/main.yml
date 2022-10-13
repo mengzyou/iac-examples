@@ -1,0 +1,16 @@
+- hosts: k3s
+  name: Install k3s-server
+  roles:
+    - role: k3s
+      when: role == "server"
+  tags:
+    - k3s
+
+- hosts: k3s
+  name: Install k3s-agents
+  roles:
+    - role: k3s
+      when: role == "agent"
+  tags:
+    - k3s
+
